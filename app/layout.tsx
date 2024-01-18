@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,11 +20,11 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={inter.className}>
 				<header>
-					<p>nav place holder</p>
+					<Navbar />
 				</header>
 				<main>{children}</main>
 				<footer>
-					<p>© 2024 MarketBuzz365</p>
+					<Footer />
 				</footer>
 			</body>
 		</html>
