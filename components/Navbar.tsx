@@ -6,13 +6,19 @@ export default function Navbar() {
 	return (
 		<div>
 			<nav className='flex h-[64px] bg-secondary items-center'>
-				<Link href='/'>Logo / MarketBuzz365</Link>
+				<Link href='/' className='text-foreground hover:text-primary'>
+					Logo / MarketBuzz365
+				</Link>
 				<ul className='flex ml-auto items-center gap-4'>
 					<li>
-						<Link href='reports'>Reports</Link>
+						<Link href='reports' className='text-foreground hover:text-primary'>
+							Reports
+						</Link>
 					</li>
 					<li>
-						<Link href='about'>About</Link>
+						<Link href='about' className='text-foreground hover:text-primary'>
+							About
+						</Link>
 					</li>
 					<li>
 						<Button>Sign In</Button>
