@@ -7,10 +7,13 @@ export default function UserBtn() {
 		<Link href='/'>
 			<div className='border border-foreground rounded-[8px] p-2 flex items-center gap-2 max-h-[48px]'>
 				<Avatar>
-					<AvatarImage src='https://avatars.githubusercontent.com/u/81101993?v=4' />
+					<AvatarImage
+						src='https://avatars.githubusercontent.com/u/81101993?v=4'
+						alt='user profile img'
+					/>
 					<AvatarFallback>userName</AvatarFallback>
 				</Avatar>
-				<span className='text-base'>Name</span>
+				<span className='text-base'>longFirstName</span>
 			</div>
 		</Link>
 	);
