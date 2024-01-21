@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -16,13 +17,20 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body>
-				<header>
-					<Navbar />
-				</header>
-				<main>{children}</main>
-				<footer>
-					<Footer />
-				</footer>
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='system'
+					enableSystem
+					disableTransitionOnChange
+				>
+					<header>
+						<Navbar />
+					</header>
+					<main>{children}</main>
+					<footer>
+						<Footer />
+					</footer>
+				</ThemeProvider>
 			</body>
 		</html>
 	);

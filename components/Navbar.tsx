@@ -1,33 +1,34 @@
 import Link from 'next/link';
 import { Button } from './ui/button';
 import UserBtn from './UserBtn';
+import { ModeToggle } from './ModeToggle';
 
 export default function Navbar() {
 	return (
-		<div>
-			<nav className='flex h-[64px] bg-secondary items-center'>
-				<Link href='/' className='text-foreground hover:text-primary'>
-					Logo / MarketBuzz365
-				</Link>
-				<ul className='flex ml-auto items-center gap-4'>
-					<li>
-						<Link href='reports' className='text-foreground hover:text-primary'>
-							Reports
-						</Link>
-					</li>
-					<li>
-						<Link href='about' className='text-foreground hover:text-primary'>
-							About
-						</Link>
-					</li>
-					<li>
-						<Button>Sign In</Button>
-					</li>
-					<li>
-						<UserBtn />
-					</li>
-				</ul>
-			</nav>
-		</div>
+		<nav className='flex h-[64px] items-center mt-[32px]'>
+			<ul className='flex items-center gap-4'>
+				<li>
+					<Link href='/'>Logo / MarketBuzz365</Link>
+				</li>
+				<li>
+					<Link href='reports' className='text-foreground hover:text-primary'>
+						Reports
+					</Link>
+				</li>
+				<li>
+					<Link href='about' className='text-foreground hover:text-primary'>
+						About
+					</Link>
+				</li>
+				<li>
+					<UserBtn />
+				</li>
+			</ul>
+			<div className='flex ml-auto items-center gap-[16px]'>
+				<ModeToggle />
+				<div className='bg-foreground w-[1px] h-[32px]'></div>
+				<Button>Sign In</Button>
+			</div>
+		</nav>
 	);
 }
