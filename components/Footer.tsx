@@ -2,13 +2,15 @@ import Link from 'next/link';
 
 export default function Footer() {
 	return (
-		<div className='flex mt-4 w-full justify-evenly items-center relative px-[40px]'>
-			<div className='h-[1px] bg-primary w-[80%] absolute top-0'></div>
-			<div className='rounded bg-secondary p-3'>
+		<div className='flex justify-between items-center mt-4 w-full relative rounded-[8px] p-4'>
+			<div className='h-[2px] bg-primary w-[50%] absolute top-0 left-[25%]'></div>
+
+			<div className='bg-secondary rounded-[8px] p-4'>
 				<p className='text-[32px]'>MarketBuzz365</p>
 				<p>© 2024 MarketBuzz365</p>
 			</div>
-			<div className='flex gap-[40px] p-8'>
+
+			<div className='flex gap-[40px]'>
 				<div className='flex flex-col gap-[16px] p-4'>
 					<Link href='reports' className='text-foreground hover:text-primary'>
 						Reports
