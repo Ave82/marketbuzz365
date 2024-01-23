@@ -1,6 +1,7 @@
 import ArticleCard from '@/components/ArticleCard';
 
-export default function page() {
+export default async function page() {
+	await new Promise((resolve) => setTimeout(resolve, 5000));
 	return (
 		<div className='p-4'>
 			<h1>Reports Page</h1>
