@@ -7,11 +7,11 @@ import UserBtn from './UserBtn';
 export default function UserLoggin() {
 	const { data: session } = useSession();
 
-	if (session) {
-		console.log(session);
+	if (session && session.user) {
+		console.log(session.user);
 		return (
 			<>
-				<UserBtn />
+				<UserBtn user={session.user} />
 				<Button onClick={() => signOut()}>Sign Out</Button>
 			</>
 		);
