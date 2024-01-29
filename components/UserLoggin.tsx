@@ -5,10 +5,17 @@ import { Button } from './ui/button';
 import UserBtn from './UserBtn';
 
 export default function UserLoggin() {
-	return (
-		<>
-			<UserBtn />
-			<Button>Sign In</Button>
-		</>
-	);
+	const { data: session } = useSession();
+
+	if (session) {
+		console.log(session);
+		return (
+			<>
+				<UserBtn />
+				<Button onClick={() => signOut()}>Sign Out</Button>
+			</>
+		);
+	} else {
+		return <Button onClick={() => signIn()}>Sign In</Button>;
+	}
 }

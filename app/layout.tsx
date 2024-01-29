@@ -20,14 +20,14 @@ export default async function RootLayout({
 
 	return (
 		<html lang='en'>
-			<SessionProvider session={session}>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='system'
-					enableSystem
-					disableTransitionOnChange
-				>
-					<body>
+			<body>
+				<SessionProvider session={session}>
+					<ThemeProvider
+						attribute='class'
+						defaultTheme='system'
+						enableSystem
+						disableTransitionOnChange
+					>
 						<header>
 							<Navbar />
 						</header>
@@ -35,9 +35,9 @@ export default async function RootLayout({
 						<footer>
 							<Footer />
 						</footer>
-					</body>
-				</ThemeProvider>
-			</SessionProvider>
+					</ThemeProvider>
+				</SessionProvider>
+			</body>
 		</html>
 	);
 }
