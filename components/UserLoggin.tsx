@@ -8,7 +8,6 @@ export default function UserLoggin() {
 	const { data: session } = useSession();
 
 	if (session && session.user) {
-		console.log(session.user);
 		return (
 			<>
 				<UserBtn user={session.user} />
