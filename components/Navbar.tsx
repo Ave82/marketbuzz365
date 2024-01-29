@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { Button } from './ui/button';
-import UserBtn from './UserBtn';
 import { ModeToggle } from './ModeToggle';
+import UserLoggin from './UserLoggin';
 
 export default function Navbar() {
 	return (
@@ -20,14 +19,11 @@ export default function Navbar() {
 						About
 					</Link>
 				</li>
-				<li>
-					<UserBtn />
-				</li>
 			</ul>
 			<div className='flex ml-auto items-center gap-[16px]'>
 				<ModeToggle />
 				<div className='bg-foreground w-[1px] h-[32px]'></div>
-				<Button>Sign In</Button>
+				<UserLoggin />
 			</div>
 		</nav>
 	);
